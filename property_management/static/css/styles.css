@@ -1,0 +1,31 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: #333;
+  color: white;
+  padding: 1rem;
+  text-align: center;
+}
+
+.property-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.property-card {
+  border: 1px solid #ccc;
+  padding: 1rem;
+  width: 300px;
+  text-align: center;
+}
+
+.property-card img {
+  max-width: 100%;
+  height: auto;
+}

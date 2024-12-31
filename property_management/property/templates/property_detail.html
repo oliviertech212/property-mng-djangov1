@@ -1,0 +1,32 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{{ property.title }}</title>
+    <link rel="stylesheet" href="{% static 'css/styles.css' %}" />
+  </head>
+  <body>
+    <header>
+      <h1>{{ property.title }}</h1>
+    </header>
+    <main>
+      <img src="{{ property.image.url }}" alt="Image of {{ property.title }}" />
+      <p>Address: {{ property.address }}</p>
+      <p>Type: {{ property.property_type }}</p>
+      <p>Rent: ${{ property.rent }}</p>
+      <p>{{ property.description }}</p>
+      <h3>More Images</h3>
+      {% if property.more_images %}
+      <img
+        src="{{ property.more_images.url }}"
+        alt="More images of {{ property.title }}"
+      />
+      {% else %}
+      <p>No additional images available.</p>
+      {% endif %}
+      <a href="{% url 'property_list' %}">Back to Listings</a>
+    </main>
+  </body>
+</html>

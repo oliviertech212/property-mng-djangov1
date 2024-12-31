@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Tenant Dashboard</title>
+  </head>
+  <body>
+    <h1>Tenant Dashboard</h1>
+    <table>
+      <tr>
+        <th>Property</th>
+        <th>Rent Amount</th>
+        <th>Lease Start Date</th>
+        <th>Lease End Date</th>
+      </tr>
+      {% for lease in leases %}
+      <tr>
+        <td>{{ lease.property.title }}</td>
+        <td>{{ lease.rent_amount }}</td>
+        <td>{{ lease.start_date }}</td>
+        <td>{{ lease.end_date }}</td>
+      </tr>
+      {% endfor %}
+    </table>
+  </body>
+</html>
